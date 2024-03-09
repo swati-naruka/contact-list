@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import ContactList from './ContactList'
+import { useState, useEffect } from "react";
 function App() {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+      const fetchData = async () => {
+          try {
+              const response = await fetch('https://jsonplaceholder.typicode.com/users');
+              const data = await response.json();
+              setUsers(data);
+          } catch (error) {
+              console.error('Error fetching data:', error);
+          }
+      };
+
+      fetchData();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      
+          
+          <ContactList users={users} />
+      
   );
 }
 

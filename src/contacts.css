@@ -1,0 +1,23 @@
+
+.contact{
+    display: flex;
+    background-color: #e9d8a6;;
+    border-radius: 5px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-around;
+    margin: 2%;
+}
+.contact-name{
+    display: inline-block;
+    margin-left: 2%;
+}
+.contact-number{
+    display: inline-block;
+    margin-left: 2%;
+    
+}
+h3{
+    display:inline-block;
+}

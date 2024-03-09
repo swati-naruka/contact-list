@@ -1,0 +1,18 @@
+p{
+    font-size: 50px;
+    color: #90e0ef;
+    font-weight:bolder;
+
+}
+.contacts-container{
+    display: flex;
+    flex-direction: column;
+    width:60%;
+    background-color: #ffc300;
+    margin-left:20%;
+    margin-top: 5%;
+    
+}
+label{
+    color:#ffc300;
+}
